@@ -4,30 +4,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Fuentes locales */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/Minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IconsSocial';
+  src: url('../fonts/Icons Social Media 5.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /* ESTILOS PARA EL CUERPO DE LA PÁGINA */
 body {
   background-color: #003366;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Minecraft', Arial, sans-serif;
+  text-align: center;
   padding: 2rem;
   background-image: url(/taller-entornos-gX2/img/solo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 /* ESTILOS EN EL ENCABEZADO */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
 h1 {
   font-size: 2.5rem;
   color: #ffcc00;
-  font-family: 'Courier New', Courier, monospace;
+  
 }
 p {
   font-size: 1.2rem;
   color: #cccccc;
-  font-family: 'Lucida Console', Monaco, monospace;
   font-style: initial;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Clase para usar la fuente de iconos */
+.icon {
+  font-family: 'IconsSocial';
 }
