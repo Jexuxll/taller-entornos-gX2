@@ -10,6 +10,9 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   padding: 2rem;
+  background-image: url(/taller-entornos-gX2/img/solo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* ESTILOS EN EL ENCABEZADO */
 header {
