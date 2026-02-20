@@ -1,16 +1,185 @@
- 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Proyecto Web</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>TITAN | Comunidad Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web oficial de la comunidad TITAN. Historia, servidores y cómo formar parte del proyecto.">
+    <meta name="author" content="Equipo TITAN">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <h1>Proyecto Web Colaborativo</h1>
-  <p>Base creada por el Project Manager</p>
-  <p>Contenido agregado por el Desarrollador Frontend</p>
-  <p>Funcionalidad implementada por el Desarrollador Backend</p>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div>
+            <img src="img/logo-titan.png" alt="Logo de TITAN" width="120">
+            <h1>TITAN</h1>
+            <p><strong>Comunidad estratégica de Minecraft</strong></p>
+        </div>
+    </header>
+
+    <!-- ================= NAV ================= -->
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#servidores">Servidores</a></li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- HERO -->
+        <section id="inicio">
+            <h2>Bienvenido a TITAN</h2>
+
+            <figure>
+                <img src="img/banner1.jpg" alt="Vista panorámica del servidor TITAN" width="800">
+                <figcaption>Donde la estrategia se convierte en leyenda.</figcaption>
+            </figure>
+
+            <p>
+                TITAN no es solo un servidor. Es un ecosistema competitivo
+                construido sobre disciplina, organización y comunidad.
+                Aquí cada decisión cuenta, cada alianza importa y cada batalla
+                deja huella.
+            </p>
+
+            <p>
+                Desde su creación, el proyecto ha evolucionado con una visión clara:
+                ofrecer una experiencia estructurada, equilibrada y profesional
+                dentro del universo de Minecraft.
+            </p>
+        </section>
+
+        <!-- HISTORIA -->
+        <section id="historia">
+            <h2>Nuestra Historia</h2>
+
+            <article>
+                <h3>El Origen</h3>
+                <p>
+                    TITAN nació como una iniciativa entre jugadores con mentalidad estratégica.
+                    La intención era clara: crear un entorno competitivo donde la organización
+                    y el trabajo en equipo marcaran la diferencia.
+                </p>
+            </article>
+
+            <article>
+                <h3>La Evolución</h3>
+                <p>
+                    Con el crecimiento de la comunidad, el servidor incorporó
+                    nuevas modalidades, sistemas personalizados y eventos
+                    diseñados para elevar el nivel de experiencia.
+                </p>
+            </article>
+
+            <article>
+                <h3>El Presente</h3>
+                <p>
+                    Hoy TITAN representa una comunidad consolidada, con estructura,
+                    liderazgo y objetivos claros. No buscamos cantidad,
+                    buscamos compromiso.
+                </p>
+            </article>
+        </section>
+
+        <!-- SERVIDORES -->
+        <section id="servidores">
+            <h2>Nuestros Servidores</h2>
+
+            <article>
+                <h3>Survival Estratégico</h3>
+                <p>
+                    Economía dinámica, sistema de rangos y progresión balanceada.
+                </p>
+            </article>
+
+            <article>
+                <h3>Factions Competitivo</h3>
+                <p>
+                    Control territorial, diplomacia y guerra organizada.
+                </p>
+            </article>
+
+            <article>
+                <h3>Eventos Especiales</h3>
+                <p>
+                    Torneos periódicos diseñados para desafiar a los mejores jugadores.
+                </p>
+            </article>
+        </section>
+
+        <!-- COMUNIDAD -->
+        <section id="comunidad">
+            <h2>La Comunidad TITAN</h2>
+
+            <p>
+                La fortaleza de TITAN no reside únicamente en su infraestructura,
+                sino en las personas que la conforman.
+            </p>
+
+            <p>
+                Fomentamos el respeto, la competitividad sana y la colaboración.
+                Cada miembro es parte activa del crecimiento del proyecto.
+            </p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Únete a TITAN</h2>
+
+            <p>
+                Si compartes nuestra visión y quieres formar parte de una comunidad
+                organizada y comprometida, completa el siguiente formulario.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Datos de solicitud</legend>
+
+                    <div>
+                        <label for="nombre">Nombre de usuario</label><br>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="email">Correo electrónico</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="motivo">Motivo de ingreso</label><br>
+                        <textarea id="motivo" name="motivo" rows="4" required></textarea>
+                    </div>
+
+                    <br>
+
+                    <button type="submit">Enviar solicitud</button>
+
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 TITAN - Comunidad Oficial</p>
+        <p>Desarrollado como proyecto académico - Entornos de Desarrollo</p>
+    </footer>
+
 </body>
 </html>
