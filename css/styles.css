@@ -22,29 +22,51 @@
   font-display: swap;
 }
 /* ESTILOS PARA EL CUERPO DE LA PÁGINA */
-body {
-  background-color: #003366;
-  color: white;
-  font-family: 'Minecraft', Arial, sans-serif;
+/* ESTILOS HEADER*/
+header{
+  display: flex;
+  align-items: center;
+  background-color:cornsilk;
+  width: 70%;
+  justify-content: center;
+}
+nav{
+  width: 70%;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10vh;
+  list-style: none;
+  background-color:cornsilk;
+}
+/* ESTILOS BODY */
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color:azure;
+}
+main{
+  width: 70%;
+  background-color:aliceblue;
+}
+main :nth-child{
+  margin-top: 20px;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   text-align: center;
-  padding: 2rem;
-  background-image: url(/taller-entornos-gX2/img/solo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-/* ESTILOS EN EL ENCABEZADO */
-h1 {
-  font-size: 2.5rem;
-  color: #ffcc00;
-  
-}
-p {
-  font-size: 1.2rem;
-  color: #cccccc;
-  font-style: initial;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-/* Clase para usar la fuente de iconos */
-.icon {
-  font-family: 'IconsSocial';
+/* ESTILOS FOOTER */
+footer{
+  display: flex;
+  align-self: center;
+  width: 70%;
+  background-color:beige;
 }
