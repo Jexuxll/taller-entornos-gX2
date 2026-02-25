@@ -5,13 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let index = 0;
     const total = slides.length;
-    const interval = 3500;
 
     function updateCarousel() {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        indicators.forEach((dot, i) =>
-        dot.classList.toggle('active', i === index)
-        );
+        // Si volvemos al inicio, quitamos la transición un momento para que no se vea el "rebobinado"
+        if (index === 0) {
+            track.style.transition = 'none';
+            track.style.transform = `translateX(0%)`;
+            // Forzamos un reflow para que el navegador note el cambio sin animar
+            track.offsetHeight; 
+            track.style.transition = 'transform 0.5s ease-in-out';
+        } else {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Actualizar indicadores (mantenemos tus clases originales)
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
 
     function nextSlide() {
@@ -19,8 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCarousel();
     }
 
-    setInterval(nextSlide, interval);
-
+    setInterval(nextSlide, 3500);
+});
+// Función para copiar la IP al portapapeles
     document.getElementById("copy-ip").addEventListener("click", function() {
     const ip = "135.148.136.225:20010 ";
 
@@ -28,4 +39,3 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("IP copiada: " + ip);
     });
     });
-});

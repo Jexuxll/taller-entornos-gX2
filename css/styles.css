@@ -37,6 +37,9 @@ header{
   align-items: center;
   gap: 20px;
 }
+.header1 img{
+  margin-top: 20px;
+}
 nav{
   padding: 5px;
   width: 70%;
@@ -103,6 +106,10 @@ main :nth-child{
   transition: all 0.5s ease;
   cursor: pointer;
 }
+.serverlinks .elpp{
+  font-size: 60px;
+  margin-top: 20px;
+}
 section{
   display: flex;
   flex-direction: column;
@@ -122,7 +129,8 @@ section{
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease-in-out; /* Controla la velocidad del movimiento */
+  
 }
 
 .carousel-track img {
@@ -131,25 +139,7 @@ section{
   object-fit: cover;
   flex-shrink: 0;
 }
-.carousel-indicators {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-.indicator {
-  width: 12px;
-  height: 6px;
-  background: rgba(255,255,255,0.6);
-  border-radius: 4px;
-  transition: width 0.3s ease, background 0.3s ease;
-}
-.indicator.active {
-  width: 28px;
-  background: white;
-}
+
 /* BOTONES */
 button {
   background: #1E4FAF; /* azul */
