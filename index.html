@@ -7,19 +7,25 @@
     <meta name="description" content="Web oficial de la comunidad TITAN. Historia, servidores y cómo formar parte del proyecto.">
     <meta name="author" content="Equipo TITAN">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
     <header>
-        <div>
-            <img src="img/logo-titan.png" alt="LOGO" width="120">
+        <div class="header1">
+            <img src="img/TitanLogo.png" alt="Logo de TITAN" width="120">
             <h1>TITAN</h1>
             <p><strong>Comunidad estratégica de Minecraft</strong></p>
         </div>
     </header>
-
     <!-- ================= NAV ================= -->
     <nav aria-label="Menú principal">
         <ul>
@@ -30,17 +36,49 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
-
     <!-- ================= MAIN ================= -->
     <main>
-
         <!-- HERO -->
         <section id="inicio">
-            <h2>Bienvenido a TITAN</h2>
-
+            <div class="serverlinks">
+                <a href="https://discord.gg/yuVZfFvs93" target="_blank">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <h2>Bienvenido a TITAN</h2>
+                <a href="" id="copy-ip">
+                    <img src="/img/minecraft-2k-image-v0-sgr7fkxrwxz71.jpg" alt="IP del servidor TITAN">
+                </a>
+            </div>
             <figure>
-                <img src="img/banner1.jpg" alt="Vista panorámica del servidor TITAN" width="800">
+                <img src="img/banner1.jpg" alt="Vista panorámica del servidor TITAN">
                 <figcaption>Donde la estrategia se convierte en leyenda.</figcaption>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/img/gato.jpg" alt="">
+                        <img src="/img/solo.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/casa.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
             </figure>
 
             <p>
@@ -64,17 +102,19 @@
             <article>
                 <h3>El Origen</h3>
                 <p>
-                    TITAN nació como una iniciativa entre jugadores con mentalidad estratégica.
-                    La intención era clara: crear un entorno competitivo donde la organización
-                    y el trabajo en equipo marcaran la diferencia.
+                    En el año 2016 TITAN MJ, concebido entre un joven argentino y su amigo uruguayo, ambos apasionados por Minecraft y 
+                    la idea de crear un servidor que se destacara por su organización, competitividad y sobre todas las cosas,
+                    ser una innoovación dentro del universo de Minecraft, con el objetivo de ofrecer una experiencia única a los jugadores
+                    nunca antes vista en este videojuego.
                 </p>
             </article>
 
             <article>
                 <h3>La Evolución</h3>
                 <p>
-                    Con el crecimiento de la comunidad, el servidor incorporó
-                    nuevas modalidades, sistemas personalizados y eventos
+                    Con el paso del tiempo el servidor creció gracias a la comunidad, pasando de tener 10 usuarios 
+                    jugando simultaneamente a tener 60 usuarios simultaneos, este crecimiento se fueron
+                    incorporandonuevas modalidades, sistemas personalizados y eventos
                     diseñados para elevar el nivel de experiencia.
                 </p>
             </article>
@@ -82,9 +122,9 @@
             <article>
                 <h3>El Presente</h3>
                 <p>
-                    Hoy TITAN representa una comunidad consolidada, con estructura,
-                    liderazgo y objetivos claros. No buscamos cantidad,
-                    buscamos compromiso.
+                    Hoy TITAN representa una comunidad consolidada, con estructura y que ha evolucionado en otros videojuegos,
+                    teniendo subgrupos de jugadores de más de 15 diferentes juegos, pero siempre con la misma esencia de organización, 
+                    competitividad y comunidad que caracteriza a TITAN desde sus inicios.
                 </p>
             </article>
         </section>
@@ -96,21 +136,21 @@
             <article>
                 <h3>Survival Estratégico</h3>
                 <p>
-                    Economía dinámica, sistema de rangos y progresión balanceada.
-                </p>
-            </article>
-
-            <article>
-                <h3>Factions Competitivo</h3>
-                <p>
                     Control territorial, diplomacia y guerra organizada.
                 </p>
             </article>
 
             <article>
-                <h3>Eventos Especiales</h3>
+                <h3>Survival Roleplay</h3>
                 <p>
-                    Torneos periódicos diseñados para desafiar a los mejores jugadores.
+                    Narrativa y supervivencia, cada jugador tiene un papel que desempeñar.
+                </p>
+            </article>
+
+            <article>
+                <h3>MDQServers CS:GO</h3>
+                <p>
+                    Competencia táctica y precisión, enfrentamientos intensos en modos FPS personalizados.
                 </p>
             </article>
         </section>
@@ -165,20 +205,35 @@
 
                     <br>
 
-                    <button type="submit">Enviar solicitud</button>
+                    <button class="boton" type="submit">Enviar solicitud</button>
 
                 </fieldset>
 
             </form>
         </section>
-
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/JavaScript/JavaScript.js"></script>
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
-        <hr>
-        <p>&copy; 2026 TITAN - Comunidad Oficial</p>
-        <p>Desarrollado como proyecto académico - Entornos de Desarrollo</p>
+        <div>
+            <hr>
+            <p>&copy; 2026 TITAN - Comunidad Oficial</p>
+            <p>Desarrollado como proyecto académico - Entornos de Desarrollo</p>
+        </div>
+        <div class="footer-content">
+            <div class="contacto">
+                <h3>Contacto</h3>
+
+            </div>
+            <div class="redes-sociales">
+                <a href="https://discord.gg/yuVZfFvs93" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="X.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
