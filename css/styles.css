@@ -22,29 +22,211 @@
   font-display: swap;
 }
 /* ESTILOS PARA EL CUERPO DE LA PÁGINA */
-body {
-  background-color: #003366;
-  color: white;
-  font-family: 'Minecraft', Arial, sans-serif;
-  text-align: center;
-  padding: 2rem;
-  background-image: url(/taller-entornos-gX2/img/solo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+/* ESTILOS HEADER*/
+header{
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: center;
+  background: #1E4FAF; /* azul */
+  color: #FFFFFF;
 }
-/* ESTILOS EN EL ENCABEZADO */
-h1 {
-  font-size: 2.5rem;
-  color: #ffcc00;
+.header1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.header1 img{
+  margin-top: 20px;
+}
+nav{
+  padding: 5px;
+  width: 70%;
+  background: #142F6B; /* azul oscuro */
+}
+nav ul{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10vh;
+  list-style: none;
+}
+nav ul li a{
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+  position: relative;
+}
+nav ul li a:hover {
+  color: #C62828; /* rojo */
+}
+nav ul li a::after {
+  content: "";
+  position: absolute; left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #C62828; /* rojo del hover */
+  transition: width 0.3s ease;
+}
+nav ul li a:hover::after { width: 100%; }
+/* ESTILOS BODY */
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color:azure;
+}
+main{
+  width: 70%;
+  background: #FFFFFF;
+  color: #2E2E2E; /* gris oscuro */
+}
+main :nth-child{
+  margin-top: 20px;
+}
+.serverlinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+.serverlinks i{
+  font-size: 7.5vh;
+  color: #7289DA; /* Color de Discord */
+}
+.serverlinks img{
+  margin-top: 10px;
+  width: 10vh;
+  height: auto;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.serverlinks .elpp{
+  font-size: 60px;
+  margin-top: 20px;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+/* ESTILOS PARA EL CAROUSEL */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out; /* Controla la velocidad del movimiento */
   
 }
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* BOTONES */
+button {
+  background: #1E4FAF; /* azul */
+  color: #FFFFFF;
+  width: 150px;
+  height: 40px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.boton{
+    border-radius: 8px;
+}
+button:hover {
+  transition: all 0.3s ease;
+  background: #C62828; /* rojo */
+}
+
+/* FONTS */
+h1, h2, h3 {
+  font-family: 'Minecraft', sans-serif;
+}
 p {
-  font-size: 1.2rem;
-  color: #cccccc;
-  font-style: initial;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Rajdhani", "Lato", sans-serif;
 }
-/* Clase para usar la fuente de iconos */
-.icon {
-  font-family: 'IconsSocial';
+.serverlinks h2 {
+  font-size: 2.5rem;
 }
+header h1, header p{
+  color: #FFFFFF;
+}
+main h2, main h3 {
+   color: #1E4FAF; /* azul */
+}
+/* ENLACES */
+nav a {
+  font-family: "Rajdhani", "Lato", sans-serif;
+  color: #1E4FAF; /* azul */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #C62828; /* rojo */
+}
+.serverlinks a {
+  color: #7289DA;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.serverlinks a:hover {
+  color: #99AAB5;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+/* ESTILOS FOOTER */
+footer{
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 70%;
+  background: #142F6B; /* azul oscuro */
+  color: #FFFFFF;
+  gap: 40px;
+}
+.contacto{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.redes-sociales{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.redes-sociales a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1.5rem;
+}
+.redes-sociales a:hover {
+  color: #C62828; /* rojo */
+}
+footer hr { border-color: #C62828; /* rojo */ }
