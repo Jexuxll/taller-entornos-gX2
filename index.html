@@ -54,20 +54,40 @@
                 <figcaption>Donde la estrategia se convierte en leyenda.</figcaption>
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="/img/gato.jpg" alt="">
-                        <img src="/img/solo.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
-                        <img src="/img/casa.jpg" alt="">
+                        <img src="/img/f1.png" alt="">
+                        <img src="/img/f2.png" alt="">
+                        <img src="/img/f3.png" alt="">
+                        <img src="/img/f4.png" alt="">
+                        <img src="/img/f5.png" alt="">
+                        <img src="/img/f6.png" alt="">
+                        <img src="/img/f7.png" alt="">
+                        <img src="/img/f8.webp" alt="">
+                        <img src="/img/f9.webp" alt="">
+                        <img src="/img/f10.webp" alt="">
+                        <img src="/img/f11.png" alt="">
+                        <img src="/img/f12.png" alt="">
+                        <img src="/img/f13.png" alt="">
+                        <img src="/img/f14.png" alt="">
+                        <img src="/img/f15.png" alt="">
+                        <img src="/img/f16.png" alt="">
+                        <img src="/img/f17.png" alt="">
+                        <img src="/img/f18.png" alt="">
+                        <img src="/img/f19.png" alt="">
+                        <img src="/img/f20.webp" alt="">
                     </div>
 
                     <div class="carousel-indicators">
                         <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
                         <span class="indicator"></span>
                         <span class="indicator"></span>
                         <span class="indicator"></span>
@@ -131,29 +151,73 @@
 
         <!-- SERVIDORES -->
         <section id="servidores">
-            <!-- CHRISTIANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN Parte para poner el segundo carrusel -->
-            <h2>Nuestros Servidores</h2>
+            <h2>Nuestros Servidores de Minecraft</h2>
 
-            <article>
-                <h3>Survival Estratégico</h3>
-                <p>
-                    Control territorial, diplomacia y guerra organizada.
-                </p>
-            </article>
+            <div class="server-tabs">
+                <button class="tab-btn active" data-target="survival">
+                    <span class="icon">⚔️</span> Survival
+                </button>
+                <button class="tab-btn" data-target="factions">
+                    <span class="icon">🏰</span> Factions
+                </button>
+                <button class="tab-btn" data-target="eventos">
+                    <span class="icon">🏆</span> Eventos
+                </button>
+            </div>
 
-            <article>
-                <h3>Survival Roleplay</h3>
-                <p>
-                    Narrativa y supervivencia, cada jugador tiene un papel que desempeñar.
-                </p>
-            </article>
+            <div class="server-display">
+                
+                <article class="tab-content active" id="survival">
+                    <div class="info-text">
+                        <h3>Survival Estratégico</h3>
+                        <p>Economía dinámica, sistema de rangos y progresión balanceada.</p>
+                        <div class="feature-grid">
+                            <span class="feature-tag">Protección de tierras avanzada</span>
+                            <span class="feature-tag">Mercado global entre jugadores</span>
+                            <span class="feature-tag">Misiones diarias y semanales</span>
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <video  playsinline src="/img/GIF_de_Facciones_Guerra_y_Diplomacia.mp4" type="video/mp4" autoplay loop muted>
+                        </video>
+                    </div>
+                </article>
 
-            <article>
-                <h3>MDQServers CS:GO</h3>
-                <p>
-                    Competencia táctica y precisión, enfrentamientos intensos en modos FPS personalizados.
-                </p>
-            </article>
+                <article class="tab-content" id="factions">
+                    <div class="info-text">
+                        <h3>Factions Competitivo</h3>
+                        <p>Control territorial, diplomacia y guerra organizada.</p>
+                        <div class="feature-grid">
+                            <span class="feature-tag">Cañones de TNT personalizados</span>
+                            <span class="feature-tag">Sistema de poder por facción</span>
+                            <span class="feature-tag">Premios por temporada</span>
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <video  playsinline width="80%" height="80%" autoplay loop muted>
+                            <source src="/img/GIF_de_Facciones_Guerra_y_Diplomacia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <article class="tab-content" id="eventos">
+                    <div class="info-text">
+                        <h3>Eventos Especiales</h3>
+                        <p>Torneos periódicos diseñados para desafiar a los mejores jugadores.</p>
+                        <div class="feature-grid">
+                            <span class="feature-tag">Torneos de PvP 1v1 y 2v2</span>
+                            <span class="feature-tag">Carreras de Parkour masivas</span>
+                            <span class="feature-tag">Recompensas exclusivas y rangos</span>
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <video  playsinline width="80%" height="80%" autoplay loop muted>
+                            <source src="/img/GIF_de_Facciones_Guerra_y_Diplomacia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+            </div>
         </section>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

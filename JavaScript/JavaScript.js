@@ -39,3 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("IP copiada: " + ip);
     });
     });
+// FUNCION PARA EL SELECTOR TABS DEL CARRUSEL 2do
+document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // 1. Desactivar todos los botones y contenidos
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // 2. Activar el botón clicado
+            tab.classList.add('active');
+
+            // 3. Activar el contenido correspondiente
+            const targetId = tab.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+});
