@@ -461,11 +461,12 @@ footer hr { border-color: #C62828; /* rojo */ }
   background-color: #C62828; /* rojo TITAN */
   color: #FFFFFF;
   padding: 4px 8px;
-  margin: 0 2px;
+  margin: 0px;
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.9rem;
   transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: middle;
 }
 .creditos-btn:hover,
 .creditos-btn:focus {
