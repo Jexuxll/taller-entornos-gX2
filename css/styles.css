@@ -1,14 +1,22 @@
-/* ESTILOS GENERALES */
+/* ======================================
+   1. RESETS Y ESTILOS GENERALES
+   ====================================== */
+/* reset global de margenes, paddings y box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ======================================
+   2. TIPOGRAFÍAS LOCALES
+   ====================================== */
+/* fuentes importadas desde la carpeta fonts */
+
 /* Fuentes locales */
 @font-face {
-  font-family: 'Minecraft';
-  src: url('../fonts/Minecraft.ttf') format('truetype');
+  font-family: 'Minecraftia';
+  src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,6 +29,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* ======================================
+   3. HEADER Y NAVEGACIÓN
+   ====================================== */
+/* cabecera principal y menú */
 /* ESTILOS PARA EL CUERPO DE LA PÁGINA */
 /* ESTILOS HEADER*/
 header{
@@ -72,7 +85,10 @@ nav ul li a::after {
   transition: width 0.3s ease;
 }
 nav ul li a:hover::after { width: 100%; }
-/* ESTILOS BODY */
+/* ======================================
+   4. LAYOUT GENERAL (body, main, secciones)
+   ====================================== */
+/* estilos principales del cuerpo de la página */
 body{
   display: flex;
   flex-direction: column;
@@ -88,12 +104,49 @@ main{
 main :nth-child{
   margin-top: 20px;
 }
+/* ======================================
+   5. COMPONENTE SERVERLINKS
+   ====================================== */
+/* fila con icono, texto y imagen del héroe */
 .serverlinks{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 150px;
+  margin-top: 30px;
+  flex-wrap: nowrap; /* keep all three items on same line */
+}
+
+/* responsive tweaks: reduce gap and shrink elements so they fit in a row */
+@media (max-width: 1023px) {
+  .serverlinks {
+    gap: 60px;
+  }
+  .serverlinks h2 {
+    font-size: 1.5rem;
+  }
+  .serverlinks i {
+    font-size: 6vh;
+  }
+  .serverlinks img {
+    width: 8vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .serverlinks {
+    gap: 30px;
+  }
+  .serverlinks h2 {
+    font-size: 1.2rem;
+  }
+  .serverlinks i {
+    font-size: 5vh;
+  }
+  .serverlinks img {
+    width: 6vh;
+  }
 }
 .serverlinks i{
   font-size: 7.5vh;
@@ -108,7 +161,11 @@ main :nth-child{
 }
 .serverlinks .elpp{
   font-size: 60px;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+.serverlinks h2{
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 section{
   display: flex;
@@ -117,14 +174,22 @@ section{
   gap: 20px;
   text-align: center;
 }
-/* ESTILOS PARA EL CAROUSEL */
+#inicio h5{
+  margin-bottom: 30px;
+}
+#historia p{
+  text-align: justify;
+}
+/* ======================================
+   6. CARRUSEL PRINCIPAL
+   ====================================== */
+/* imágenes de portada en movimiento */
 .carousel {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 .carousel-track {
   display: flex;
   width: 100%;
@@ -132,15 +197,16 @@ section{
   transition: transform 0.5s ease-in-out; /* Controla la velocidad del movimiento */
   
 }
-
 .carousel-track img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   flex-shrink: 0;
 }
-
-/* BOTONES */
+/* ======================================
+   7. BOTONES Y ELEMENTOS INTERACTIVOS
+   ====================================== */
+/* estilo base para todos los botones */
 button {
   background: #1E4FAF; /* azul */
   color: #FFFFFF;
@@ -156,13 +222,169 @@ button:hover {
   transition: all 0.3s ease;
   background: #C62828; /* rojo */
 }
+/* ======================================
+   8. SECCIÓN SERVIDORES (tabs y contenidos)
+   ====================================== */
+/* --- ESTILOS GENERALES SERVIDORES --- */
+#servidores {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#servidores h2 {
+    text-align: center;
+    color: #0047ab; /* Azul TITAN */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+/* --- PESTAÑAS (TABS) --- */
+.server-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -2px; /* Une las pestañas al cuadro */
+}
+.tab-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: 2px solid #0047ab;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    min-width: 160px;
+    justify-content: center;
+}
+.tab-btn:not(:last-child) {
+    border-right: none;
+}
+.tab-btn.active {
+    background-color: #0047ab; /* Azul activo */
+    border-bottom: 4px solid #ffcc00; /* Detalle dorado */
+    transform: translateY(-5px);
+}
+/* --- CUADRO DE CONTENIDO --- */
+.server-display {
+    background: #2c3e50;
+    border: 2px solid #0d3771;
+    border-radius: 1px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    min-height: 350px;
+}
+.tab-content {
+    display: none; /* Oculto por defecto */
+    gap: 40px;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+    color: #FFFFFF;
+}
+.tab-content.active {
+    display: flex; /* Se muestra como flexbox al activarse */
+}
+/* Texto e Imagen al 50% cada uno */
+.info-text {
+    flex: 1;
+}
+.info-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.info-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+.info-image video {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
 
+/* responsive: stack video under text and allow wider display on narrow screens */
+@media (max-width: 767px) {
+  .tab-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info-image video {
+    max-width: none; /* let video occupy full container */
+    width: 100%;
+  }
+  .info-text {
+    text-align: center;
+  }
+}
+
+/* responsivo para móviles: tabs en columna si la pantalla es estrecha */
+@media (max-width: 850px) {
+    .tab-content.active {
+        flex-direction: column;
+        text-align: center;
+    }
+    .server-tabs {
+        flex-wrap: wrap;
+    }
+}
+/* --- ELEMENTOS INTERNOS (Botones oscuros) --- */
+.info-text h3 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.feature-tag {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.feature-tag::before {
+    content: "✓";
+    margin-right: 8px;
+    color: #2ecc71; /* Verde para el check */
+
+}
+/* --- ANIMACIÓN --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================================
+   9. TIPOGRAFÍAS Y ENLACES
+   ====================================== */
+/* Responsivo para móviles */
+@media (max-width: 850px) {
+    .tab-content.active {
+        flex-direction: column;
+        text-align: center;
+    }
+    .server-tabs {
+        flex-wrap: wrap;
+    }
+}
 /* FONTS */
 h1, h2, h3 {
-  font-family: 'Minecraft', sans-serif;
+  font-family: 'Minecraftia', sans-serif;
 }
 p {
-  font-family: "Rajdhani", "Lato", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .serverlinks h2 {
   font-size: 2.5rem;
@@ -196,7 +418,9 @@ nav a:hover {
   transition: all 0.5s ease;
 }
 
-/* ESTILOS FOOTER */
+/* ======================================
+   10. PIE DE PÁGINA (FOOTER)
+   ====================================== */
 footer{
   margin-top: 10px;
   display: flex;
@@ -230,3 +454,72 @@ footer{
   color: #C62828; /* rojo */
 }
 footer hr { border-color: #C62828; /* rojo */ }
+
+/* enlaces de créditos transformados en botones pequeños */
+.creditos-btn {
+  display: inline-block;
+  background-color: #C62828; /* rojo TITAN */
+  color: #FFFFFF;
+  padding: 4px 8px;
+  margin: 0px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: middle;
+}
+.creditos-btn:hover,
+.creditos-btn:focus {
+  background-color: #e53935;
+  color: #fff;
+}
+
+/* Media queries for responsive layout: mobile, tablet, desktop */
+
+/* mobile phones */
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+  .contacto,
+  .redes-sociales {
+    width: 100%;
+    justify-content: center;
+  }
+  .redes-sociales {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .creditos-btn {
+    padding: 6px 10px;
+    font-size: 1rem;
+    margin: 4px 2px;
+  }
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+    align-items: center;
+  }
+  .redes-sociales {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* desktop (1024px and above) – defaults already applied */
+@media (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    width: 70%;
+    gap: 40px;
+  }
+}
+
